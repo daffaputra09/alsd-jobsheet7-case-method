@@ -38,14 +38,14 @@ public class SistemAkademik {
     public static void tampilkanDaftarMataKuliah() {
         System.out.println("\nDaftar Mata Kuliah:");
         for (int i = 0; i < jumlahMataKuliah; i++) {
-            System.out.println("Kode MK: " + daftarMataKuliah[i].kodeMK + " | Nama: " + daftarMataKuliah[i].namaMK + " | SKS: " + daftarMataKuliah[i].sks);
+            daftarMataKuliah[i].tampilMatakuliah();
         }
     }
 
     public static void tampilkanDataPenilaian() {
         System.out.println("\nData Penilaian:");
         for (int i = 0; i < jumlahPenilaian; i++) {
-            System.out.println("Nama: " + daftarPenilaian[i].mahasiswa.nama + " | Mata Kuliah: " + daftarPenilaian[i].mataKuliah.namaMK + " | Nilai Akhir: " + daftarPenilaian[i].nilaiAkhir);
+            daftarPenilaian[i].tampilPenilaian();
         }
     }
 
@@ -67,7 +67,7 @@ public class SistemAkademik {
 
         System.out.println("\nData Penilaian:");
         for (int i = 0; i < jumlahPenilaian; i++) {
-            System.out.println("Nama: " + tempPenilaian[i].mahasiswa.nama + " | Mata Kuliah: " + tempPenilaian[i].mataKuliah.namaMK + " | Nilai Akhir: " + tempPenilaian[i].nilaiAkhir);
+            tempPenilaian[i].tampilPenilaian();
         }
     }
 
@@ -78,7 +78,7 @@ public class SistemAkademik {
         boolean ditemukan = false;
         for (int i = 0; i < jumlahMahasiswa; i++) {
             if (daftarMahasiswa[i].NIM.equals(nimCari)) {
-                System.out.println("Mahasiswa Ditemukan: NIM: " + daftarMahasiswa[i].NIM + " | Nama: " + daftarMahasiswa[i].nama + " | Prodi: " + daftarMahasiswa[i].prodi);
+                daftarMahasiswa[i].tampilMahasiswa();
                 ditemukan = true;
                 break;
             }

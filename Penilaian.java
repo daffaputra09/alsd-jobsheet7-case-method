@@ -18,4 +18,8 @@ public class Penilaian {
     public void hitungNilaiAkhir() {
         this.nilaiAkhir = (nilaiTugas * 0.3) + (nilaiUTS * 0.3) + (nilaiUAS * 0.4);
     }
+
+    public void tampilPenilaian() {
+        System.out.println("Nama: " + mahasiswa.nama + " | Mata Kuliah: " + mataKuliah.namaMK + " | Nilai Akhir: " + nilaiAkhir);
+    }
 }
